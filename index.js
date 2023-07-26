@@ -13,7 +13,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use("/users", userRouter);
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
